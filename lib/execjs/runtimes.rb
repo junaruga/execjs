@@ -38,13 +38,6 @@ module ExecJS
       deprecated:  true
     )
 
-    JScript = ExternalRuntime.new(
-      name:        "JScript",
-      command:     "cscript //E:jscript //Nologo //U",
-      runner_path: ExecJS.root + "/support/jscript_runner.js",
-      encoding:    'UTF-16LE' # CScript with //U returns UTF-16LE
-    )
-
     V8 = ExternalRuntime.new(
       name:        "V8",
       command:     "d8",
@@ -86,7 +79,6 @@ module ExecJS
         Node,
         JavaScriptCore,
         SpiderMonkey,
-        JScript,
         V8
       ]
     end
